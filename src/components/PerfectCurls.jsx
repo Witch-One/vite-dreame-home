@@ -3,13 +3,13 @@ import React from "react";
 const PerfectCurls = () => {
   return (
     <div className="py-20 px-5 flex flex-col items-center w-full overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* PC端布局 */}
         <div className="hidden md:flex items-center gap-12">
           <div className="flex-1">
             <div className="relative bg-orange-100 rounded-3xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=600&fit=crop"
+                src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/ecae1dee-745b-4e46-ad48-6f3271c62f52.png"
                 alt="Perfect Curls Demo"
                 className="w-full h-[500px] object-cover"
               />
@@ -33,7 +33,7 @@ const PerfectCurls = () => {
                 Perfect Curls in 1 Second
               </h2>
               <p
-                className="text-lg leading-relaxed"
+                className="text-lg leading-relaxed max-w-[400px] "
                 style={{
                   fontFamily: "MiSans Latin, sans-serif",
                   fontWeight: 380,
@@ -49,25 +49,19 @@ const PerfectCurls = () => {
 
             {/* Before/After 对比图 */}
             <div className="flex gap-4 mt-8">
-              <div className="relative">
+              <div className="relative flex-1">
                 <img
-                  src="https://images.unsplash.com/photo-1594736797933-d0dcce0cf137?w=200&h=200&fit=crop&crop=face"
+                  src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/1426c4cf-4b62-419d-a8ef-d53d945e5d42.png"
                   alt="Before"
-                  className="w-32 h-40 object-cover rounded-xl"
+                  className="w-full object-cover rounded-xl"
                 />
-                <div className="absolute bottom-3 left-3 bg-white px-2 py-1 rounded-md text-sm font-medium">
-                  Before
-                </div>
               </div>
-              <div className="relative">
+              <div className="relative flex-1">
                 <img
-                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=200&h=200&fit=crop&crop=face"
+                  src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/916a0384-e153-44fb-8edd-73ca60eec03c.png"
                   alt="After"
-                  className="w-32 h-40 object-cover rounded-xl"
+                  className="w-full object-cover rounded-xl"
                 />
-                <div className="absolute bottom-3 left-3 bg-white px-2 py-1 rounded-md text-sm font-medium">
-                  After
-                </div>
               </div>
             </div>
           </div>
@@ -81,8 +75,12 @@ const PerfectCurls = () => {
               className="text-sm font-medium mb-3"
               style={{
                 fontFamily: "MiSans Latin, sans-serif",
-                color: "#c97545",
                 fontWeight: 400,
+                display: "inline-block",
+                background: "linear-gradient(90deg, #E9AF8B 0%, #C97545 100%)",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
               }}
             >
               32mm Auto-Wrap Barrels
@@ -114,10 +112,10 @@ const PerfectCurls = () => {
           </div>
 
           {/* 主图 */}
-          <div className="mb-6">
-            <div className="relative bg-orange-100 rounded-3xl overflow-hidden mx-4">
+          <div className="mb-2">
+            <div className="relative bg-orange-100 rounded-lg overflow-hidden mx-4">
               <img
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=500&fit=crop"
+                src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/ecae1dee-745b-4e46-ad48-6f3271c62f52.png"
                 alt="Perfect Curls Demo"
                 className="w-full h-[400px] object-cover"
               />
@@ -125,26 +123,20 @@ const PerfectCurls = () => {
           </div>
 
           {/* Before/After 对比图 */}
-          <div className="flex justify-center gap-4 px-4">
-            <div className="relative">
+          <div className="flex justify-center gap-2 px-4">
+            <div className="relative flex-1">
               <img
-                src="https://images.unsplash.com/photo-1594736797933-d0dcce0cf137?w=150&h=180&fit=crop&crop=face"
+                src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/1426c4cf-4b62-419d-a8ef-d53d945e5d42.png"
                 alt="Before"
-                className="w-24 h-32 object-cover rounded-xl"
+                className="object-cover rounded-sm"
               />
-              <div className="absolute bottom-2 left-2 bg-white px-2 py-1 rounded-md text-xs font-medium">
-                Before
-              </div>
             </div>
-            <div className="relative">
+            <div className="relative flex-1">
               <img
-                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=150&h=180&fit=crop&crop=face"
+                src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/916a0384-e153-44fb-8edd-73ca60eec03c.png"
                 alt="After"
-                className="w-24 h-32 object-cover rounded-xl"
+                className="object-cover rounded-sm"
               />
-              <div className="absolute bottom-2 left-2 bg-white px-2 py-1 rounded-md text-xs font-medium">
-                After
-              </div>
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -13,7 +12,7 @@ const SmoothingBrushTabs = () => {
       alt: "before",
     },
     {
-      src: "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/9a88f2b8-0160-4d9e-8e46-711666062a68.png",
+      src: "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/dea62685-ef6c-4872-b4fb-23fd21576f1d.png",
       alt: "after",
     },
   ];
@@ -23,15 +22,20 @@ const SmoothingBrushTabs = () => {
   return (
     <div className="w-full mx-auto px-4 pb-16 overflow-hidden flex flex-col items-center gap-4">
       {/* Header */}
-      <div className="w-full max-w-6xl flex flex-col items-center gap-4">
+      <div className="w-full max-w-7xl flex flex-col items-center gap-4">
         <div className="text-center mb-12">
           <p
             className="text-xl mb-4"
             style={{
               fontFamily: "MiSans Latin, sans-serif",
               fontWeight: 450,
+              display: "inline-block",
               color: "#c97545",
               letterSpacing: "0.02em",
+              background: "linear-gradient(90deg, #E9AF8B 0%, #C97545 100%)",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
             }}
           >
             Soft / Hard Smoothing Brush

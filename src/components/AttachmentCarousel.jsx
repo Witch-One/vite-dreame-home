@@ -12,7 +12,7 @@ const AttachmentCarousel = () => {
   const [isEnd, setIsEnd] = useState(false);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 pb-16">
+    <div className="w-full max-w-7xl mx-auto pb-16">
       <div className="relative">
         <Swiper
           modules={[Navigation, Pagination]}
@@ -65,7 +65,7 @@ const AttachmentCarousel = () => {
 
                   {/* 描述 */}
                   <p
-                    className="text-base mb-8"
+                    className="text-base md:mb-8"
                     style={{
                       fontFamily: "MiSans Latin, sans-serif",
                       fontWeight: 380,
@@ -81,44 +81,26 @@ const AttachmentCarousel = () => {
                   <div className="flex gap-4">
                     <div className="flex-1">
                       <div
-                        className="rounded-2xl overflow-hidden h-32 mb-2"
+                        className="rounded-2xl overflow-hidden  mb-2"
                         style={{ backgroundColor: "#F5F1ED" }}
                       >
                         <img
-                          src="https://images.unsplash.com/photo-1594736797933-d0dcce0cf137?w=300&h=200&fit=crop"
+                          src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/2b6d1727-dc8b-470b-b115-2b614d894e36.png"
                           alt="Before"
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div
-                        className="text-center px-4 py-2 rounded-lg bg-white text-sm"
-                        style={{
-                          fontFamily: "MiSans Latin, sans-serif",
-                          fontWeight: 500,
-                        }}
-                      >
-                        Before
-                      </div>
                     </div>
                     <div className="flex-1">
                       <div
-                        className="rounded-2xl overflow-hidden h-32 mb-2"
+                        className="rounded-2xl overflow-hidden  mb-2"
                         style={{ backgroundColor: "#F5F1ED" }}
                       >
                         <img
-                          src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=300&h=200&fit=crop"
+                          src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/0490fd10-fd3a-4629-8d8c-d2a975db5778.png"
                           alt="After"
                           className="w-full h-full object-cover"
                         />
-                      </div>
-                      <div
-                        className="text-center px-4 py-2 rounded-lg bg-white text-sm"
-                        style={{
-                          fontFamily: "MiSans Latin, sans-serif",
-                          fontWeight: 500,
-                        }}
-                      >
-                        After
                       </div>
                     </div>
                   </div>
@@ -126,13 +108,13 @@ const AttachmentCarousel = () => {
               </div>
 
               {/* 移动端：中间图片，桌面端：左侧图片 */}
-              <div className="w-full md:flex-1 md:pr-8 order-2 md:order-1 mb-8 md:mb-0">
+              <div className="w-full md:flex-1 md:pr-8 order-2 md:order-1 mb-2 md:mb-0">
                 <div
-                  className="rounded-3xl overflow-hidden h-[300px] md:h-[500px] flex items-center justify-center"
+                  className="rounded-3xl overflow-hidden md:h-[566px] flex items-center justify-center"
                   style={{ backgroundColor: "#F5F1ED" }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=600&fit=crop"
+                    src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/b35b167d-5f85-42e4-8742-8efe046c1876.png"
                     alt="Flyaway Attachment"
                     className="w-full h-full object-cover"
                   />
@@ -141,47 +123,29 @@ const AttachmentCarousel = () => {
 
               {/* 移动端：底部对比图，桌面端：隐藏 */}
               <div className="w-full order-3 md:hidden">
-                <div className="flex gap-4">
+                <div className="flex gap-2">
                   <div className="flex-1">
                     <div
-                      className="rounded-2xl overflow-hidden h-32 mb-2"
+                      className="rounded-2xl overflow-hidden mb-2"
                       style={{ backgroundColor: "#F5F1ED" }}
                     >
                       <img
-                        src="https://images.unsplash.com/photo-1594736797933-d0dcce0cf137?w=300&h=200&fit=crop"
+                        src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/2b6d1727-dc8b-470b-b115-2b614d894e36.png"
                         alt="Before"
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div
-                      className="text-center px-4 py-2 rounded-lg bg-white text-sm"
-                      style={{
-                        fontFamily: "MiSans Latin, sans-serif",
-                        fontWeight: 500,
-                      }}
-                    >
-                      Before
-                    </div>
                   </div>
                   <div className="flex-1">
                     <div
-                      className="rounded-2xl overflow-hidden h-32 mb-2"
+                      className="rounded-2xl overflow-hidden mb-2"
                       style={{ backgroundColor: "#F5F1ED" }}
                     >
                       <img
-                        src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=300&h=200&fit=crop"
+                        src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/0490fd10-fd3a-4629-8d8c-d2a975db5778.png"
                         alt="After"
                         className="w-full h-full object-cover"
                       />
-                    </div>
-                    <div
-                      className="text-center px-4 py-2 rounded-lg bg-white text-sm"
-                      style={{
-                        fontFamily: "MiSans Latin, sans-serif",
-                        fontWeight: 500,
-                      }}
-                    >
-                      After
                     </div>
                   </div>
                 </div>
@@ -194,15 +158,19 @@ const AttachmentCarousel = () => {
             <div className="flex flex-col md:flex-row items-center justify-between h-full px-4 py-8">
               {/* 移动端：最顶部内容，桌面端：右侧内容 */}
               <div className="w-full md:flex-1 md:pl-8 order-1 md:order-2 h-full flex flex-col justify-between">
-                <div className="space-y-6 text-center md:text-left mb-8 md:mb-0">
+                <div className="space-y-6 text-center md:text-left mb-8 md:mb-0 md:py-4">
                   {/* 分类标题 */}
                   <p
-                    className="text-sm"
+                    className="text-sm mb-2"
                     style={{
                       fontFamily: "MiSans Latin, sans-serif",
-                      fontWeight: 400,
-                      color: "#c97545",
+                      fontWeight: "bolder",
                       letterSpacing: "0.02em",
+                      background:
+                        "linear-gradient(90deg, #E9AF8B 0%, #C97545 100%)",
+                      backgroundClip: "text",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
                     }}
                   >
                     Root-Boosting Volumizing Brush
@@ -210,7 +178,7 @@ const AttachmentCarousel = () => {
 
                   {/* 主标题 */}
                   <h2
-                    className="text-2xl md:text-4xl mb-6"
+                    className="text-2xl md:text-4xl mb-4"
                     style={{
                       fontFamily: "MiSans Latin, sans-serif",
                       fontWeight: 630,
@@ -223,7 +191,7 @@ const AttachmentCarousel = () => {
 
                   {/* 描述 */}
                   <p
-                    className="text-base mb-8"
+                    className="text-base mb-8 md:max-w-[500px]"
                     style={{
                       fontFamily: "MiSans Latin, sans-serif",
                       fontWeight: 380,
@@ -240,24 +208,14 @@ const AttachmentCarousel = () => {
                 <div className="w-full order-3 hidden md:block">
                   <div className="w-full">
                     <div
-                      className="rounded-2xl overflow-hidden h-32"
+                      className="rounded-2xl overflow-hidden "
                       style={{ backgroundColor: "#F5F1ED" }}
                     >
                       <img
-                        src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=400&h=200&fit=crop"
+                        src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/4b0c530a-4dfd-4072-b390-d960b7f64004.png"
                         alt="Root-Boosting Volumizing Brush Product"
                         className="w-full h-full object-cover"
                       />
-                    </div>
-                    <div
-                      className="text-center mt-2 text-sm"
-                      style={{
-                        fontFamily: "MiSans Latin, sans-serif",
-                        fontWeight: 500,
-                        color: "#666",
-                      }}
-                    >
-                      Root-Boosting Volumizing Brush
                     </div>
                   </div>
                 </div>
@@ -266,11 +224,11 @@ const AttachmentCarousel = () => {
               {/* 移动端：中间图片，桌面端：左侧图片 */}
               <div className="w-full md:flex-1 md:pr-8 order-2 md:order-1 mb-8 md:mb-0">
                 <div
-                  className="rounded-3xl overflow-hidden h-[300px] md:h-[500px] flex items-center justify-center"
+                  className="rounded-3xl overflow-hidden flex items-center justify-center"
                   style={{ backgroundColor: "#F5F1ED" }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600&h=600&fit=crop"
+                    src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/7835054a-f373-4930-893a-371b0ee7c316.png"
                     alt="Root-Boosting Volumizing Brush"
                     className="w-full h-full object-cover"
                   />

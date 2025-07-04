@@ -16,7 +16,7 @@ const BrushTabs = ({ activeTab, setActiveTab, swiperInstance }) => {
 
   return (
     <div className="w-full mx-auto px-4 flex flex-col items-center">
-      <div className="w-full max-w-6xl mx-auto px-4">
+      <div className="w-full max-w-7xl mx-auto px-4">
         {/* Tab切换按钮 */}
         <div className="flex w-full mb-[1rem] border-b border-gray-200">
           <button

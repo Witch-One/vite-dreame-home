@@ -5,35 +5,35 @@ const EverydayBeautyFeatures = () => {
     {
       id: 1,
       image:
-        "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=400&h=300&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/8c59a096-de9a-4541-84e8-4818febf2fc2.png",
       title: "Seamless Switch",
       description: "Quick-Swap Attachments",
     },
     {
       id: 2,
       image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/62cf5dc7-31aa-4d46-972d-9bd02a3651a8.png",
       title: "Uninterrupted Movement",
       description: "360° Anti-Tangle Cord",
     },
     {
       id: 3,
       image:
-        "https://images.unsplash.com/photo-1594736797933-d0dcce0cf137?w=400&h=300&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/508ca659-29c4-45c8-b525-6f150ab392f7.png",
       title: "Reduced Residues",
       description: "Easy-to-Clean Filter",
     },
     {
       id: 4,
       image:
-        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=300&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/d233a17a-3e8b-42ec-aa8d-d7e3b47d9910.png",
       title: "Lightweight Body",
       description: "Lightweight as 7 Lemons • 0.81 lbs",
     },
     {
       id: 5,
       image:
-        "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=400&h=300&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/d9c9d6f7-28e1-4dc5-94a1-269385202cac.png",
       title: "Faux Curling",
       description: "Styling Made Easy",
     },
@@ -57,12 +57,12 @@ const EverydayBeautyFeatures = () => {
       </div>
 
       {/* PC端：网格布局 */}
-      <div className="hidden md:grid md:grid-cols-5 gap-6">
+      <div className="flex  gap-6 overflow-x-auto hidden md:flex">
         {features.map((feature) => (
           <div key={feature.id} className="flex flex-col">
             {/* 图片容器 */}
             <div
-              className="rounded-2xl overflow-hidden mb-4 aspect-square"
+              className="rounded-2xl overflow-auto mb-4 aspect-square h-[480px] w-[360px]"
               style={{ backgroundColor: "#F5F1ED" }}
             >
               <img
@@ -70,32 +70,6 @@ const EverydayBeautyFeatures = () => {
                 alt={feature.title}
                 className="w-full h-full object-cover"
               />
-            </div>
-
-            {/* 文字内容 */}
-            <div className="text-center">
-              <h3
-                className="text-lg mb-2"
-                style={{
-                  fontFamily: "MiSans Latin, sans-serif",
-                  fontWeight: 600,
-                  color: "#333",
-                  lineHeight: "130%",
-                }}
-              >
-                {feature.title}
-              </h3>
-              <p
-                className="text-sm"
-                style={{
-                  fontFamily: "MiSans Latin, sans-serif",
-                  fontWeight: 400,
-                  color: "#666",
-                  lineHeight: "140%",
-                }}
-              >
-                {feature.description}
-              </p>
             </div>
           </div>
         ))}
@@ -108,11 +82,11 @@ const EverydayBeautyFeatures = () => {
             {features.map((feature) => (
               <div
                 key={feature.id}
-                className="flex flex-col w-64 flex-shrink-0"
+                className="flex flex-col w-48 flex-shrink-0"
               >
                 {/* 图片容器 */}
                 <div
-                  className="rounded-2xl overflow-hidden mb-4 h-48"
+                  className="rounded-2xl overflow-hidden mb-4"
                   style={{ backgroundColor: "#F5F1ED" }}
                 >
                   <img
@@ -120,32 +94,6 @@ const EverydayBeautyFeatures = () => {
                     alt={feature.title}
                     className="w-full h-full object-cover"
                   />
-                </div>
-
-                {/* 文字内容 */}
-                <div className="text-center px-2">
-                  <h3
-                    className="text-lg mb-2"
-                    style={{
-                      fontFamily: "MiSans Latin, sans-serif",
-                      fontWeight: 600,
-                      color: "#333",
-                      lineHeight: "130%",
-                    }}
-                  >
-                    {feature.title}
-                  </h3>
-                  <p
-                    className="text-sm"
-                    style={{
-                      fontFamily: "MiSans Latin, sans-serif",
-                      fontWeight: 400,
-                      color: "#666",
-                      lineHeight: "140%",
-                    }}
-                  >
-                    {feature.description}
-                  </p>
                 </div>
               </div>
             ))}
