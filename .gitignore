@@ -160,3 +160,6 @@ $RECYCLE.BIN/
 build/
 dist/
 *.local
+
+home-images
+
