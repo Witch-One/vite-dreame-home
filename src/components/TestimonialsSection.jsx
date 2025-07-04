@@ -7,32 +7,28 @@ const TestimonialsSection = () => {
       name: "Jessica",
       rating: 5.0,
       text: "I used to spend forever switching between my dryer, straightener, and curling wand. With Airstyle Pro, I get everything done in one go — and my hair looks smoother than ever. So worth it!",
-      image:
-        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/3b90fd4834a39b43fe1c16e37e157b16d68b73cb.jpg",
+      image: "3b90fd4834a39b43fe1c16e37e157b16d68b73cb.jpg",
     },
     {
       id: 2,
       name: "Natalie R",
       rating: 5.0,
       text: "I've tried a bunch of styling tools, but this one is on another level. My hair holds shape all day without frizz, and it's actually fun to use. Feels sturdy too!",
-      image:
-        "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop",
+      image: "5de53567-2423-4f01-bebc-bd75d2954a02.png",
     },
     {
       id: 3,
       name: "Amber",
       rating: 5.0,
       text: "I'm not very skilled with hair tools, but this one made me feel like a pro. The brush cups smoothly, hot tips make styling so much easier.",
-      image:
-        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=300&fit=crop",
+      image: "554678a1366d286af557e08546083e40d5238243.jpg",
     },
     {
       id: 4,
       name: "Danielle",
       rating: 5.0,
       text: "I Was SO skeptical at first, but wow — I This hair tool style and the curl last all the way tomorrow evening. So chic.",
-      image:
-        "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=400&h=300&fit=crop",
+      image: "91898a9a-1a33-4280-82bb-c214d6a8c932.png",
     },
   ];
 
@@ -55,7 +51,10 @@ const TestimonialsSection = () => {
     >
       <div className="h-full w-full overflow-hidden">
         <img
-          src={testimonial.image}
+          src={
+            "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/" +
+            testimonial.image
+          }
           alt={testimonial.name}
           className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
         />
@@ -80,16 +79,12 @@ const TestimonialsSection = () => {
   );
 
   return (
-    <div className="py-20 px-5 flex flex-col items-center w-full overflow-hidden">
+    <div className="py-16 px-5 flex flex-col items-center w-full overflow-hidden">
       {/* 标题 */}
       <div className="max-w-4xl mx-auto text-center mb-16">
-        <h2 className="text-5xl font-bold bg-gradient-to-r from-brand-orange-light to-brand-orange bg-clip-text text-transparent mb-8 tracking-tight leading-tight">
+        <h2 className="text-5xl font-bold m-0 bg-gradient-to-r from-brand-orange-light to-brand-orange bg-clip-text text-transparent tracking-tight leading-tight">
           What Our Users Say
         </h2>
-        <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-          Real feedback from customers who transformed their hair styling
-          routine with our innovative tools.
-        </p>
       </div>
 
       {/* 移动端横向滚动 */}
