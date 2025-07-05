@@ -11,8 +11,9 @@ import VideoShowcase from "./components/VideoShowcase";
 import ProductHighlights from "./components/ProductHighlights";
 import Specifications from "./components/Specifications";
 import AchievementsAwards from "./components/AchievementsAwards";
+import FigmaFAQ from "./components/FigmaFAQ";
 
-// import './App.css' // 暂时注释掉以使用Tailwind CSS
+import './App.css'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <ProductHighlights />
       <Specifications />
       <AchievementsAwards />
+      <FigmaFAQ />
     </div>
   );
 }

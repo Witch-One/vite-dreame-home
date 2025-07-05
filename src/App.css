@@ -581,3 +581,234 @@ body,
     padding: 15px;
   }
 }
+
+/* FigmaFAQ FAQ模块样式 */
+.figma-faq-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  background: #ffffff;
+}
+
+/* FAQ 主标题 */
+.faq-main-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.faq-main-title h2 {
+  font-size: 40px;
+  font-weight: 900;
+  font-family: 'MiSans_Latin', sans-serif;
+  background: linear-gradient(90deg, #e9af8b, #c97545);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* FAQ 副标题 */
+.faq-main-subtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 814px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-main-subtitle p {
+  font-size: 22px;
+  color: #9a9a9a;
+  font-family: 'MiSans_Latin', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* FAQ 列表 */
+.faq-list {
+  width: 100%;
+  max-width: 936px;
+  margin: 0 auto;
+}
+
+/* FAQ 项目 */
+.faq-item {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+/* FAQ 问题区域 */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 33px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question-text {
+  font-size: 20.24px;
+  font-weight: 500;
+  color: #03060b;
+  font-family: 'MiSans_Latin', sans-serif;
+  line-height: 29.76px;
+  margin: 0;
+  flex: 1;
+  padding-right: 2rem;
+}
+
+/* FAQ 切换按钮 */
+.faq-toggle-btn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+
+.faq-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+/* FAQ 答案区域 */
+.faq-answer {
+  padding: 0 0 1.5rem 0;
+  animation: fadeIn 0.3s ease;
+}
+
+.faq-answer p {
+  font-size: 16.67px;
+  color: #666666;
+  font-family: 'MiSans_Latin', sans-serif;
+  font-weight: 400;
+  line-height: 26.19px;
+  margin: 0;
+  max-width: 1038px;
+}
+
+/* FAQ 分割线 */
+.faq-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0;
+}
+
+/* 展开状态样式 */
+.faq-item.expanded .faq-answer {
+  display: block;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 移动端响应式样式 */
+@media (max-width: 768px) {
+  .figma-faq-container {
+    padding: 2rem 1rem;
+    margin: 2rem auto;
+  }
+
+  /* 移动端标题 */
+  .faq-main-title h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    max-width: 425px;
+    margin: 0 auto;
+  }
+
+  /* 移动端副标题 */
+  .faq-main-subtitle {
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+
+  .faq-main-subtitle p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* 移动端FAQ列表 */
+  .faq-list {
+    max-width: 720px;
+  }
+
+  /* 移动端FAQ问题 */
+  .faq-question {
+    padding: 20px 0;
+  }
+
+  .faq-question-text {
+    font-size: 17px;
+    line-height: 25px;
+    padding-right: 3rem;
+  }
+
+  /* 移动端FAQ答案 */
+  .faq-answer {
+    padding: 0 0 1rem 0;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 100%;
+  }
+
+  /* 移动端切换按钮 */
+  .faq-toggle-btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .faq-arrow {
+    width: 10px;
+    height: 6px;
+  }
+}
+
+/* 更小屏幕适配 */
+@media (max-width: 480px) {
+  .figma-faq-container {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .faq-main-title h2 {
+    font-size: 32px;
+    max-width: 320px;
+  }
+
+  .faq-main-subtitle p {
+    font-size: 14px;
+  }
+
+  .faq-question-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .faq-answer p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
