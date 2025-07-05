@@ -7,9 +7,11 @@ const VideoShowcase = () => {
       title:
         "See what's inside and how each attachment upgrades your styling routine.",
       author: {
-        name: "D R E A M E",
+        avatar:
+          "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/DREAME.png",
         subscribers: "",
       },
+      link: "https://www.youtube.com/watch?v=7bTgJT-zKBg",
       thumbnail:
         "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/8fb2032fb02665ed7ecba658cab8f29f045fa02c.jpg",
       duration: "3:24",
@@ -20,11 +22,12 @@ const VideoShowcase = () => {
       author: {
         name: "Joanna Marie Kutkina",
         avatar:
-          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face",
+          "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/Joanna Marie Kutkina.jpg",
         subscribers: "556K subscribers",
       },
+      link: "https://www.youtube.com/watch?v=1X9pGIxdyS4",
       thumbnail:
-        "https://images.unsplash.com/photo-1594736797933-d0dcce0cf137?w=500&h=300&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/6814f310d3937495fe25f9d973907c6edb7730ee.png",
       duration: "5:12",
     },
     {
@@ -33,37 +36,41 @@ const VideoShowcase = () => {
       author: {
         name: "anastasia",
         avatar:
-          "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face",
+          "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/anastasile.jpg",
         subscribers: "3.6M subscribers",
       },
+      link: "https://youtube.com/shorts/9QkdZ_NC_Sw",
       thumbnail:
-        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=500&h=300&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/9ef365c8d0bed9978cbf517f4b01ee2f8f26ba49.jpg",
       duration: "2:45",
     },
     {
       id: 4,
-      title: "Ready in 15 minutes, no heat damage, all glam.",
+      title: "Salon-Worthy curls at home in 15 minutes.",
       author: {
-        name: "cindyprado28",
+        name: "sabyhesri",
         avatar:
-          "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=60&h=60&fit=crop&crop=face",
+          "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/sabyhesri.jpg",
         subscribers: "826K subscribers",
       },
+      link: "https://www.youtube.com/shorts/UdNYHAy5YUw",
       thumbnail:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/8890ae0b3542e9bee50497b26ecc7f255b2bb780.jpg",
       duration: "4:30",
     },
     {
       id: 5,
-      title: "Salon-Worthy curls at home in 15 minutes.",
+      title: "Ready in 15 minutes, no heat damage, all glam.",
+
       author: {
-        name: "vasillevafl",
+        name: "cindyprado28",
         avatar:
-          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&crop=face",
+          "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/cindyprado.jpg",
         subscribers: "3.3M subscribers",
       },
+      link: "https://youtube.com/shorts/HOJR20RKe0c",
       thumbnail:
-        "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=500&h=300&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/d26a883c0b30f7bd8527e678d21a26d1c585e968.jpg",
       duration: "6:18",
     },
   ];
@@ -91,11 +98,12 @@ const VideoShowcase = () => {
           {videos.map((video) => (
             <div
               key={video.id}
-              className="flex flex-col w-80 flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
+              onClick={() => window.open(video.link, "_blank")}
+              className="flex flex-col w-80 flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 select-none cursor-pointer"
             >
               {/* 视频缩略图 */}
               <div className="relative group cursor-pointer">
-                <div className="aspect-video overflow-hidden">
+                <div className=" h-72">
                   <img
                     src={video.thumbnail}
                     alt={video.title}
@@ -124,7 +132,7 @@ const VideoShowcase = () => {
               </div>
 
               {/* 视频信息 */}
-              <div className="p-4">
+              <div className="p-4 bg-[#FFF8F2] flex-1">
                 {/* 标题 */}
                 <h3
                   className="text-sm mb-3 line-clamp-2"
@@ -145,7 +153,7 @@ const VideoShowcase = () => {
                 {/* 作者信息 */}
                 <div className="flex items-center gap-3">
                   {/* 作者头像 */}
-                  {video.author.avatar && (
+                  {video.author.name ? (
                     <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
                       <img
                         src={video.author.avatar}
@@ -153,31 +161,41 @@ const VideoShowcase = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
+                  ) : (
+                    <div className="h-8 overflow-hidden flex-shrink-0">
+                      <img
+                        src={video.author.avatar}
+                        alt={video.author.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   )}
-                  {/* 作者名称和订阅数 */}
-                  <div className="flex-1 min-w-0">
-                    <p
-                      className="text-sm truncate"
-                      style={{
-                        fontFamily: "MiSans Latin, sans-serif",
-                        fontWeight: 600,
-                        color: "#333",
-                      }}
-                    >
-                      {video.author.name}
-                    </p>
-                    {video.author.subscribers && (
+
+                  {video.author.name && (
+                    <div className="flex-1 min-w-0">
                       <p
-                        className="text-xs text-gray-500"
+                        className="text-sm truncate"
                         style={{
                           fontFamily: "MiSans Latin, sans-serif",
-                          fontWeight: 400,
+                          fontWeight: 600,
+                          color: "#333",
                         }}
                       >
-                        {video.author.subscribers}
+                        {video.author.name}
                       </p>
-                    )}
-                  </div>
+                      {video.author.subscribers && (
+                        <p
+                          className="text-xs text-gray-500"
+                          style={{
+                            fontFamily: "MiSans Latin, sans-serif",
+                            fontWeight: 400,
+                          }}
+                        >
+                          {video.author.subscribers}
+                        </p>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

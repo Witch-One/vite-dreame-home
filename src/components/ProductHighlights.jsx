@@ -6,104 +6,60 @@ const ProductHighlights = () => {
 
   const highlights = [
     {
-      id: 1,
-      title: "Professional Salon Results",
-      description:
-        "Achieve salon-quality styling at home with advanced heat technology and precision attachments.",
+      id: 0,
+      title: "Power Cord with the Handle",
+      description: "x1",
       image:
-        "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=500&h=400&fit=crop",
-      thumbnail:
-        "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=80&h=80&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/0bd085e0-3080-46db-a03d-03ce88667455.png",
+    },
+    {
+      id: 1,
+      title: "Fast Dryer",
+      description: "x1",
+      image:
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/f7c2901a-4c15-420e-bf8a-68a11af002b5.png",
     },
     {
       id: 2,
-      title: "Multi-Function Styling Tool",
-      description:
-        "One device, endless possibilities. Style, dry, curl, and smooth with interchangeable attachments.",
+      title: "Flyaway Attachment",
+      description: "x1",
       image:
-        "https://images.unsplash.com/photo-1594736797933-d0dcce0cf137?w=500&h=400&fit=crop",
-      thumbnail:
-        "https://images.unsplash.com/photo-1594736797933-d0dcce0cf137?w=80&h=80&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/d8c9ae56-d191-4f8e-b29a-007cd4018c06.png",
     },
     {
       id: 3,
-      title: "Fast & Efficient Drying",
-      description:
-        "Powerful motor and optimized airflow deliver 2x faster drying without compromising hair health.",
+      title: "32mm Auto-Wrap Barrel",
+      description: "x2",
       image:
-        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=500&h=400&fit=crop",
-      thumbnail:
-        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=80&h=80&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/7d1bc898-7af6-47bd-90ff-87b7cb90afb1.png",
     },
     {
       id: 4,
-      title: "Heat Protection Technology",
-      description:
-        "Intelligent temperature control prevents overheating and protects hair from heat damage.",
+      title: "Hard Smoothing Brush",
+      description: "x1",
       image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=400&fit=crop",
-      thumbnail:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=80&h=80&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/6c7086ea-c472-49d0-8052-a1cf8df69d67.png",
     },
     {
       id: 5,
-      title: "Lightweight Design",
-      description:
-        "Ergonomic design weighs only 0.81 lbs, reducing hand fatigue during extended styling sessions.",
+      title: "Heat Protection Technology",
+      description: "x1",
       image:
-        "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=500&h=400&fit=crop",
-      thumbnail:
-        "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=80&h=80&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/4fc06bb5-bec0-47bd-8c54-6e0825b3dd37.png",
     },
     {
       id: 6,
-      title: "Tangle-Free Cord",
-      description:
-        "360° swivel cord prevents tangling and provides unrestricted movement while styling.",
+      title: "Round Volumizing Brush",
+      description: "x1",
       image:
-        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&h=400&fit=crop",
-      thumbnail:
-        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=80&h=80&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/3e2ea156-a191-4008-9630-165c95e4c148.png",
     },
     {
       id: 7,
-      title: "Easy Maintenance",
-      description:
-        "Removable filter and smooth surfaces make cleaning and maintenance effortless.",
+      title: "Air Intake Filter Cleaning Brush",
+      description: "x1",
       image:
-        "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500&h=400&fit=crop",
-      thumbnail:
-        "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=80&h=80&fit=crop",
-    },
-    {
-      id: 8,
-      title: "Quiet Operation",
-      description:
-        "Advanced motor design ensures powerful performance with minimal noise levels.",
-      image:
-        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=500&h=400&fit=crop",
-      thumbnail:
-        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=80&h=80&fit=crop",
-    },
-    {
-      id: 9,
-      title: "Advanced Ion Technology",
-      description:
-        "Negative ion technology reduces frizz and static for smoother, shinier results.",
-      image:
-        "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=500&h=400&fit=crop",
-      thumbnail:
-        "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=80&h=80&fit=crop",
-    },
-    {
-      id: 10,
-      title: "Premium Build Quality",
-      description:
-        "Made with high-quality materials and components for long-lasting durability and performance.",
-      image:
-        "https://images.unsplash.com/photo-1503602642458-232111445657?w=500&h=400&fit=crop",
-      thumbnail:
-        "https://images.unsplash.com/photo-1503602642458-232111445657?w=80&h=80&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/40f11e30-50d3-4bee-a07f-a8f285bd25fc.png",
     },
   ];
 
@@ -140,10 +96,10 @@ const ProductHighlights = () => {
       {/* PC端：左侧大图 + 右侧列表 */}
       <div className="hidden md:flex gap-8 mb-8">
         {/* 左侧大图展示 */}
-        <div className="flex-1">
+        <div className="w-1/3">
           <div
-            className="rounded-2xl overflow-hidden aspect-[4/3] shadow-lg"
-            style={{ backgroundColor: "#F5F1ED" }}
+            className="rounded-2xl overflow-hidden aspect-1 shadow-lg"
+            style={{ backgroundColor: "#F8F8F8" }}
           >
             <img
               src={highlights[hoveredItem].image}
@@ -181,21 +137,21 @@ const ProductHighlights = () => {
 
         {/* 右侧特性列表 */}
         <div className="flex-1">
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-4 gap-0">
             {highlights.map((highlight, index) => (
               <div
                 key={highlight.id}
-                className={`bg-white rounded-xl p-4 cursor-pointer transition-all duration-300 ${
+                className={`bg-white rounded-xl p-2 cursor-pointer transition-all duration-300 ${
                   hoveredItem === index
-                    ? "shadow-lg border-2 border-orange-200"
-                    : "shadow-sm border-2 border-transparent hover:shadow-md"
+                    ? "border-2 border-orange-200"
+                    : "border-2 border-transparent"
                 }`}
                 onMouseEnter={() => setHoveredItem(index)}
               >
                 {/* 缩略图 */}
-                <div className="w-16 h-16 rounded-lg overflow-hidden mb-3">
+                <div className="w-full rounded-lg overflow-hidden mb-3 bg-[#F8F8F8]">
                   <img
-                    src={highlight.thumbnail}
+                    src={highlight.image}
                     alt={highlight.title}
                     className="w-full h-full object-cover"
                   />
@@ -246,9 +202,9 @@ const ProductHighlights = () => {
               {/* 图片 */}
               <div className="w-full aspect-square rounded-lg overflow-hidden mb-3">
                 <img
-                  src={highlight.thumbnail}
+                  src={highlight.image}
                   alt={highlight.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover bg-[#F8F8F8]"
                 />
               </div>
 

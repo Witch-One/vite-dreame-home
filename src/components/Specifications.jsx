@@ -33,15 +33,15 @@ const Specifications = () => {
         </h2>
 
         {/* PC端：两列布局 */}
-        <div className="hidden md:block">
+        <div className="hidden md:block pb-8">
           <div className="grid grid-cols-2 gap-x-16 gap-y-6">
             {specs.map((spec, index) => (
               <div
                 key={index}
-                className="flex justify-between items-center py-3 border-b border-gray-200"
+                className="flex flex-col justify-between items-start py-3 border-b border-gray-200"
               >
                 <span className="text-gray-600">{spec.name}</span>
-                <span className="font-semibold text-right">{spec.value}</span>
+                <span className="text-lg font-bold">{spec.value}</span>
               </div>
             ))}
           </div>
