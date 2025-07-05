@@ -238,25 +238,12 @@ const AttachmentCarousel = () => {
               {/* 移动端：底部产品图，桌面端：隐藏 */}
               <div className="w-full order-3 md:hidden">
                 <div className="w-full">
-                  <div
-                    className="rounded-2xl overflow-hidden h-32"
-                    style={{ backgroundColor: "#F5F1ED" }}
-                  >
+                  <div className="rounded-sm overflow-hidden w-full">
                     <img
-                      src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=400&h=200&fit=crop"
+                      src="https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/4b0c530a-4dfd-4072-b390-d960b7f64004.png"
                       alt="Root-Boosting Volumizing Brush Product"
                       className="w-full h-full object-cover"
                     />
-                  </div>
-                  <div
-                    className="text-center mt-2 text-sm"
-                    style={{
-                      fontFamily: "MiSans Latin, sans-serif",
-                      fontWeight: 500,
-                      color: "#666",
-                    }}
-                  >
-                    Root-Boosting Volumizing Brush
                   </div>
                 </div>
               </div>

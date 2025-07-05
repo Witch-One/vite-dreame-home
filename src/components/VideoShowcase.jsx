@@ -7,13 +7,11 @@ const VideoShowcase = () => {
       title:
         "See what's inside and how each attachment upgrades your styling routine.",
       author: {
-        name: "DREAME",
-        avatar:
-          "https://images.unsplash.com/photo-1494790108755-2616b332c35b?w=60&h=60&fit=crop&crop=face",
+        name: "D R E A M E",
         subscribers: "",
       },
       thumbnail:
-        "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=500&h=300&fit=crop",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/8fb2032fb02665ed7ecba658cab8f29f045fa02c.jpg",
       duration: "3:24",
     },
     {
@@ -147,14 +145,15 @@ const VideoShowcase = () => {
                 {/* 作者信息 */}
                 <div className="flex items-center gap-3">
                   {/* 作者头像 */}
-                  <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
-                    <img
-                      src={video.author.avatar}
-                      alt={video.author.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
+                  {video.author.avatar && (
+                    <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+                      <img
+                        src={video.author.avatar}
+                        alt={video.author.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
                   {/* 作者名称和订阅数 */}
                   <div className="flex-1 min-w-0">
                     <p

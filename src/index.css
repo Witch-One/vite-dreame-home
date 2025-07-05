@@ -50,7 +50,7 @@ body {
 
 /* 移动端 Swiper 自定义样式 */
 .mobile-swiper {
-  padding-bottom: 3rem;
+  padding-bottom: 4.5rem;
 
   overflow: hidden;
   display: flex;
@@ -66,8 +66,8 @@ body {
   background-color: #7a7a7a66;
   border-radius: 100rem;
   text-align: center;
-  width: 300px;
-  padding: 0.5rem 1rem;
+  width: 200px;
+  padding: 0.5rem;
   margin: auto;
   left: unset;
 }

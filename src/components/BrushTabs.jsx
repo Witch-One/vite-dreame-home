@@ -4,11 +4,11 @@ const BrushTabs = ({ activeTab, setActiveTab, swiperInstance }) => {
   const tabsData = [
     {
       title: "Hard Smoothing Brush",
-      description: "Detangles and tames coarse or stubborn hair with ease",
+      description: "Gently smooths fine or fragile hair without pulling",
     },
     {
       title: "Soft Smoothing Brush",
-      description: "Gently smooths fine or fragile hair without pulling",
+      description: "Detangles and tames coarse or stubborn hair with ease",
     },
   ];
 
@@ -26,11 +26,10 @@ const BrushTabs = ({ activeTab, setActiveTab, swiperInstance }) => {
                 swiperInstance.slideTo(0);
               }
             }}
-            className={`flex-1 pb-4 text-center relative transition-all duration-300`}
+            className={`flex-1 text-xs md:text-xl  pb-4 text-center relative transition-all duration-300`}
             style={{
               fontFamily: "MiSans Latin, sans-serif",
               fontWeight: 520,
-              fontSize: "20px",
               lineHeight: "120%",
               letterSpacing: "0px",
               textAlign: "center",
@@ -55,11 +54,10 @@ const BrushTabs = ({ activeTab, setActiveTab, swiperInstance }) => {
                 swiperInstance.slideTo(1);
               }
             }}
-            className={`flex-1 pb-4 text-center relative transition-all duration-300`}
+            className={`flex-1 text-xs md:text-xl pb-4 text-center relative transition-all duration-300`}
             style={{
               fontFamily: "MiSans Latin, sans-serif",
               fontWeight: 520,
-              fontSize: "20px",
               lineHeight: "120%",
               letterSpacing: "0px",
               textAlign: "center",
@@ -82,11 +80,10 @@ const BrushTabs = ({ activeTab, setActiveTab, swiperInstance }) => {
         {/* Tab内容 */}
         <div className="text-center pb-8 ">
           <p
-            className=""
+            className=" md:text-lg text-xs"
             style={{
               fontFamily: "MiSans Latin, sans-serif",
               fontWeight: 380,
-              fontSize: "16px",
               lineHeight: "140%",
               letterSpacing: "0px",
               textAlign: "center",

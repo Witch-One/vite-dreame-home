@@ -56,7 +56,7 @@ const ProductFeatures = () => {
       id: 7,
       title: "Smart Heat Control, Dedicated Hair Protection",
       image: "7b54224e-c2ee-433a-ac7a-608684989640.png",
-      mobileImage: "25212c4b-666f-4c5d-9c4e-50121852122e.png",
+      mobileImage: "10e1997d-99b3-4c21-a657-74e22db7e158.png",
       isLarge: false,
     },
     {

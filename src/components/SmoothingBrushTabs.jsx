@@ -20,7 +20,7 @@ const SmoothingBrushTabs = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   return (
-    <div className="w-full mx-auto px-4 pb-16 overflow-hidden flex flex-col items-center gap-4">
+    <div className="w-full mx-auto px-4 pb-4 md:pb-8 overflow-hidden flex flex-col items-center gap-4">
       {/* Header */}
       <div className="w-full max-w-7xl flex flex-col items-center gap-4">
         <div className="text-center mb-12">
@@ -66,7 +66,7 @@ const SmoothingBrushTabs = () => {
             loop={false}
             onSwiper={(swiper) => setSwiperInstance(swiper)}
             onSlideChange={(swiper) => setActiveTab(swiper.activeIndex)}
-            className="h-80 rounded-xl overflow-hidden"
+            className="md:h-80 h-60 rounded-xl overflow-hidden"
           >
             {carouselImages.map((image, index) => (
               <SwiperSlide key={index} className="flex">
@@ -78,18 +78,18 @@ const SmoothingBrushTabs = () => {
                   alt={image.alt}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-[1rem] flex justify-center  w-full gap-[39%]">
-                  <button className="w-[94px] h-[40px] rounded-[12px] bg-[#FFFFFF]">
-                    before
+                <div className="absolute bottom-[1rem] flex justify-center  w-full gap-[39%] md:text-xl text-sm">
+                  <button className="md:w-[94px] md:h-[40px] w-[60px] h-[26px] md:rounded-[12px] rounded-[8px] bg-[#FFFFFF] font-bold">
+                    Before
                   </button>
                   <button
-                    className="w-[94px] h-[40px] rounded-[12px] text-[#FFFFFF]"
+                    className="md:w-[94px] md:h-[40px] w-[60px] h-[26px] md:rounded-[12px] rounded-[8px] text-[#FFFFFF] font-bold"
                     style={{
                       background:
                         "linear-gradient(90deg, #E9AF8B 0%, #C97545 100%)",
                     }}
                   >
-                    after
+                    After
                   </button>
                 </div>
               </SwiperSlide>
