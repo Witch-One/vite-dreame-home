@@ -2,16 +2,15 @@ import React, { useState } from "react";
 
 const ProductHighlights = () => {
   const [showAll, setShowAll] = useState(false);
-  const [hoveredItem, setHoveredItem] = useState(0);
+  const hoveredItem = {
+    id: 0,
+    title: "Power Cord with the Handle",
+    description: "x1",
+    image:
+      "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/0bd085e0-3080-46db-a03d-03ce88667455.png",
+  };
 
   const highlights = [
-    {
-      id: 0,
-      title: "Power Cord with the Handle",
-      description: "x1",
-      image:
-        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/0bd085e0-3080-46db-a03d-03ce88667455.png",
-    },
     {
       id: 1,
       title: "Fast Dryer",
@@ -42,28 +41,37 @@ const ProductHighlights = () => {
     },
     {
       id: 5,
-      title: "Heat Protection Technology",
+      title: "Soft Smoothing Brush",
       description: "x1",
       image:
-        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/4fc06bb5-bec0-47bd-8c54-6e0825b3dd37.png",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/6c7086ea-c472-49d0-8052-a1cf8df69d67.png",
     },
     {
       id: 6,
       title: "Round Volumizing Brush",
       description: "x1",
       image:
-        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/3e2ea156-a191-4008-9630-165c95e4c148.png",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/4fc06bb5-bec0-47bd-8c54-6e0825b3dd37.png",
     },
     {
       id: 7,
       title: "Air Intake Filter Cleaning Brush",
       description: "x1",
       image:
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/3e2ea156-a191-4008-9630-165c95e4c148.png",
+    },
+    {
+      id: 8,
+      title: "Soft Pebbled Leather Textured Box",
+      description: "x1",
+      image:
         "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/40f11e30-50d3-4bee-a07f-a8f285bd25fc.png",
     },
   ];
 
-  const visibleHighlights = showAll ? highlights : highlights.slice(0, 4);
+  const visibleHighlights = showAll
+    ? [hoveredItem, ...highlights]
+    : [hoveredItem, ...highlights].slice(0, 4);
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 pb-16">
@@ -102,8 +110,8 @@ const ProductHighlights = () => {
             style={{ backgroundColor: "#F8F8F8" }}
           >
             <img
-              src={highlights[hoveredItem].image}
-              alt={highlights[hoveredItem].title}
+              src={hoveredItem.image}
+              alt={hoveredItem.title}
               className="w-full h-full object-cover transition-all duration-500"
             />
           </div>
@@ -119,7 +127,7 @@ const ProductHighlights = () => {
                 lineHeight: "130%",
               }}
             >
-              {highlights[hoveredItem].title}
+              {hoveredItem.title}
             </h3>
             <p
               className="text-base"
@@ -130,7 +138,7 @@ const ProductHighlights = () => {
                 lineHeight: "150%",
               }}
             >
-              {highlights[hoveredItem].description}
+              {hoveredItem.description}
             </p>
           </div>
         </div>
@@ -146,7 +154,6 @@ const ProductHighlights = () => {
                     ? "border-2 border-orange-200"
                     : "border-2 border-transparent"
                 }`}
-                onMouseEnter={() => setHoveredItem(index)}
               >
                 {/* 缩略图 */}
                 <div className="w-full rounded-lg overflow-hidden mb-3 bg-[#F8F8F8]">

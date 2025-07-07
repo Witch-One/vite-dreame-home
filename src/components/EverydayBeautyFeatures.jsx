@@ -5,7 +5,7 @@ const EverydayBeautyFeatures = () => {
     {
       id: 1,
       image:
-        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/8c59a096-de9a-4541-84e8-4818febf2fc2.png",
+        "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/a9c0e860-3d92-4d65-a5f9-80139afe0459.png",
       title: "Seamless Switch",
       description: "Quick-Swap Attachments",
     },

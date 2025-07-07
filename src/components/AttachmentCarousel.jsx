@@ -29,22 +29,26 @@ const AttachmentCarousel = () => {
             setIsBeginning(swiper.isBeginning);
             setIsEnd(swiper.isEnd);
           }}
-          className="h-auto md:h-[600px]"
+          className=""
         >
           {/* 第一个面板 - Flyaway Attachment */}
           <SwiperSlide>
             <div className="flex flex-col md:flex-row items-center justify-between h-full px-4 py-8">
               {/* 移动端：最顶部内容，桌面端：右侧内容 */}
-              <div className="w-full md:flex-1 md:pl-8 order-1 md:order-2 h-full flex flex-col justify-between">
-                <div className="space-y-6 text-center md:text-left mb-8 md:mb-0">
+              <div className="w-full md:flex-1 md:pl-8 order-1 md:order-2 md:h-[580px] flex flex-col justify-between">
+                <div className="space-y-6 text-center md:text-left flex flex-col gap-4">
                   {/* 分类标题 */}
                   <p
-                    className="text-sm"
+                    className="text-xl mb-0"
                     style={{
                       fontFamily: "MiSans Latin, sans-serif",
-                      fontWeight: 400,
-                      color: "#c97545",
+                      fontWeight: "bolder",
                       letterSpacing: "0.02em",
+                      background:
+                        "linear-gradient(90deg, #E9AF8B 0%, #C97545 100%)",
+                      backgroundClip: "text",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
                     }}
                   >
                     Flyaway Attachment
@@ -52,7 +56,7 @@ const AttachmentCarousel = () => {
 
                   {/* 主标题 */}
                   <h2
-                    className="text-2xl md:text-4xl mb-6"
+                    className="text-2xl md:text-4xl mb-0"
                     style={{
                       fontFamily: "MiSans Latin, sans-serif",
                       fontWeight: 630,
@@ -65,7 +69,7 @@ const AttachmentCarousel = () => {
 
                   {/* 描述 */}
                   <p
-                    className="text-base md:mb-8"
+                    className="text-base mb-0"
                     style={{
                       fontFamily: "MiSans Latin, sans-serif",
                       fontWeight: 380,
@@ -157,11 +161,11 @@ const AttachmentCarousel = () => {
           <SwiperSlide>
             <div className="flex flex-col md:flex-row items-center justify-between h-full px-4 py-8">
               {/* 移动端：最顶部内容，桌面端：右侧内容 */}
-              <div className="w-full md:flex-1 md:pl-8 order-1 md:order-2 h-full flex flex-col justify-between">
+              <div className="w-full md:flex-1 md:pl-8 order-1 md:order-2 md:h-[580px] flex flex-col justify-between">
                 <div className="space-y-6 text-center md:text-left mb-8 md:mb-0 md:py-4">
                   {/* 分类标题 */}
                   <p
-                    className="text-sm mb-2"
+                    className="text-xl mb-2"
                     style={{
                       fontFamily: "MiSans Latin, sans-serif",
                       fontWeight: "bolder",

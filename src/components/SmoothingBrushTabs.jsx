@@ -8,7 +8,7 @@ const SmoothingBrushTabs = () => {
   // 轮播图数据
   const carouselImages = [
     {
-      src: "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/14dc921a-c07f-4f99-9f0a-e9d9fded4def.png",
+      src: "https://pub-13355f36470e415392ca3e34d42aa7c2.r2.dev/home-images/fad13361-37ef-4792-b7ef-3b9023f9d4a9.png",
       alt: "before",
     },
     {
@@ -66,7 +66,7 @@ const SmoothingBrushTabs = () => {
             loop={false}
             onSwiper={(swiper) => setSwiperInstance(swiper)}
             onSlideChange={(swiper) => setActiveTab(swiper.activeIndex)}
-            className="md:h-80 h-60 rounded-xl overflow-hidden"
+            className="md:aspect-[2.14] aspect-[1.5] rounded-xl overflow-hidden"
           >
             {carouselImages.map((image, index) => (
               <SwiperSlide key={index} className="flex">

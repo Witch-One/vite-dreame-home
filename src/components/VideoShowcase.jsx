@@ -113,13 +113,7 @@ const VideoShowcase = () => {
 
                 {/* 播放按钮 */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div
-                    className="w-16 h-16 bg-[#9F9F9F8C] rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all duration-200"
-                    style={{
-                      boxShadow: "0px 2.17px 2.17px 0px #00000040",
-                      filter: "blur(2.17px)",
-                    }}
-                  >
+                  <div className="w-16 h-16 bg-[#9F9F9F8C] rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all duration-200">
                     <svg
                       className="w-6 h-6 text-white ml-1"
                       fill="currentColor"
