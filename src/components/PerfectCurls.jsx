@@ -75,7 +75,7 @@ const PerfectCurls = () => {
               className="text-sm font-medium mb-3"
               style={{
                 fontFamily: "MiSans Latin, sans-serif",
-                fontWeight: 400,
+                fontWeight: 700,
                 display: "inline-block",
                 background: "linear-gradient(90deg, #E9AF8B 0%, #C97545 100%)",
                 backgroundClip: "text",

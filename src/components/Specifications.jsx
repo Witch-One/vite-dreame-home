@@ -51,10 +51,21 @@ const Specifications = () => {
 
         {/* 移动端：单列布局 */}
         <div className="md:hidden">
-          <div className="bg-white rounded-2xl p-6">
+          <div
+            className="bg-white  p-6"
+            style={{
+              borderTop: "1.923px solid rgba(119, 119, 119, 0.30)",
+            }}
+          >
             {specs.map((spec, index) => (
               <div key={index} className="mb-4 last:mb-0">
-                <div className="font-semibold text-gray-700 mb-1">
+                <div
+                  className=" text-gray-700 mb-1 font-bold"
+                  style={{
+                    fontFamily: "MiSans Latin, sans-serif",
+                    fontWeight: 700,
+                  }}
+                >
                   {spec.name}
                 </div>
                 <div className="text-gray-600">{spec.value}</div>

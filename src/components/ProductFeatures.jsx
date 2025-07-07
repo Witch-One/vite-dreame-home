@@ -99,7 +99,7 @@ const ProductFeatures = () => {
   );
 
   return (
-    <div className="py-20 px-5 flex flex-col items-center w-full overflow-hidden">
+    <div className="mb:py-20 py-4 px-5 flex flex-col items-center w-full overflow-hidden">
       <div className="max-w-7xl mx-auto text-center w-full">
         {/* 标题区域 */}
         <h2

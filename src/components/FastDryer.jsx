@@ -2,7 +2,7 @@ import React from "react";
 
 const FastDryer = () => {
   return (
-    <div className="py-20 px-5 flex flex-col items-center w-full overflow-hidden">
+    <div className="mb:py-20 py-4 px-5 flex flex-col items-center w-full overflow-hidden">
       {/* PC端布局 */}
       <div className="hidden md:flex items-center gap-12 w-full max-w-7xl">
         {/* 左侧内容 */}
@@ -100,11 +100,11 @@ const FastDryer = () => {
         {/* 标题区域 */}
         <div className="text-center mb-8">
           <h3
-            className="text-sm font-medium mb-3"
+            className="inline-block text-sm font-medium mb-3"
             style={{
               fontFamily: "MiSans Latin, sans-serif",
               color: "#c97545",
-              fontWeight: 400,
+              fontWeight: 700,
             }}
           >
             Fast Dryer
