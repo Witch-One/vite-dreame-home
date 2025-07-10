@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 
 const EverydayBeautyFeatures = () => {
   const features = [
@@ -39,6 +39,41 @@ const EverydayBeautyFeatures = () => {
     },
   ];
 
+  // 拖拽功能状态
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const containerRef = useRef(null);
+
+  // 拖拽开始
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+    containerRef.current.style.cursor = 'grabbing';
+  };
+
+  // 拖拽过程中
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // 滚动速度倍数
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  // 拖拽结束
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    containerRef.current.style.cursor = 'grab';
+  };
+
+  // 鼠标离开容器
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+    containerRef.current.style.cursor = 'grab';
+  };
+
   return (
     <div className="w-full max-w-7xl mx-auto px-4 pb-16">
       {/* 标题 */}
@@ -57,7 +92,15 @@ const EverydayBeautyFeatures = () => {
       </div>
 
       {/* PC端：网格布局 */}
-      <div className="flex  gap-6 overflow-x-auto hidden md:flex">
+      <div 
+        ref={containerRef}
+        className="flex gap-6 overflow-x-auto hidden md:flex select-none"
+        style={{ cursor: 'grab' }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+      >
         {features.map((feature) => (
           <div key={feature.id} className="flex flex-col">
             {/* 图片容器 */}
@@ -68,7 +111,8 @@ const EverydayBeautyFeatures = () => {
               <img
                 src={feature.image}
                 alt={feature.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover select-none"
+                draggable={false}
               />
             </div>
           </div>

@@ -69,7 +69,7 @@ const AttachmentCarousel = () => {
 
                   {/* 描述 */}
                   <p
-                    className="text-base mb-0"
+                    className="text-base mb-8 md:max-w-[500px]"
                     style={{
                       fontFamily: "MiSans Latin, sans-serif",
                       fontWeight: 380,
@@ -162,7 +162,7 @@ const AttachmentCarousel = () => {
             <div className="flex flex-col md:flex-row items-center justify-between h-full px-4 py-8">
               {/* 移动端：最顶部内容，桌面端：右侧内容 */}
               <div className="w-full md:flex-1 md:pl-8 order-1 md:order-2 md:h-[580px] flex flex-col justify-between">
-                <div className="space-y-6 text-center md:text-left mb-8 md:mb-0 md:py-4">
+                <div className="space-y-6 text-center md:text-left flex flex-col gap-4">
                   {/* 分类标题 */}
                   <p
                     className="text-xl mb-2"

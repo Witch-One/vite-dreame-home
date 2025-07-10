@@ -27,7 +27,7 @@ const ProductFeatures = () => {
     {
       id: 3,
       title: "Salon-Speed Drying Right at Home",
-      image: "99001dbc-5a54-479b-87d1-dbac20bca1f6.png",
+      image: "65ec4306-27f6-4567-9bd5-780ac55a05c9.png",
       mobileImage: "f0ce1f4c-2084-485a-abd4-bae1f1954e07.png",
       isLarge: false,
     },

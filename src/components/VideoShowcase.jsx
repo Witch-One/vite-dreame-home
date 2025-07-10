@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 
 const VideoShowcase = () => {
   const videos = [
@@ -75,6 +75,45 @@ const VideoShowcase = () => {
     },
   ];
 
+  // 拖拽功能状态
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const containerRef = useRef(null);
+
+  // 拖拽开始
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+    containerRef.current.style.cursor = "grabbing";
+  };
+
+  // 拖拽过程中
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // 滚动速度倍数
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  // 拖拽结束
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    if (containerRef.current) {
+      containerRef.current.style.cursor = "grab";
+    }
+  };
+
+  // 鼠标离开容器
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+    if (containerRef.current) {
+      containerRef.current.style.cursor = "grab";
+    }
+  };
+
   return (
     <div className="w-full max-w-7xl mx-auto px-4 pb-16">
       {/* 标题 */}
@@ -93,12 +132,24 @@ const VideoShowcase = () => {
       </div>
 
       {/* 视频卡片容器 - 横向滚动 */}
-      <div className="overflow-x-auto pb-4">
+      <div
+        ref={containerRef}
+        className="overflow-x-auto pb-4 select-none"
+        style={{ cursor: "grab" }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="flex gap-6 w-max">
           {videos.map((video) => (
             <div
               key={video.id}
-              onClick={() => window.open(video.link, "_blank")}
+              onClick={() => {
+                if (!isDragging) {
+                  window.open(video.link, "_blank");
+                }
+              }}
               className="flex flex-col w-80 flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 select-none cursor-pointer"
             >
               {/* 视频缩略图 */}
@@ -107,7 +158,8 @@ const VideoShowcase = () => {
                   <img
                     src={video.thumbnail}
                     alt={video.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 select-none"
+                    draggable={false}
                   />
                 </div>
 
@@ -152,7 +204,8 @@ const VideoShowcase = () => {
                       <img
                         src={video.author.avatar}
                         alt={video.author.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover select-none"
+                        draggable={false}
                       />
                     </div>
                   ) : (
@@ -160,7 +213,8 @@ const VideoShowcase = () => {
                       <img
                         src={video.author.avatar}
                         alt={video.author.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover select-none"
+                        draggable={false}
                       />
                     </div>
                   )}

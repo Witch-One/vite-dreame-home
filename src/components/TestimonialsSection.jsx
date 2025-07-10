@@ -14,7 +14,7 @@ const TestimonialsSection = () => {
       name: "Natalie R",
       rating: 5.0,
       text: "I've tried a bunch of styling tools, but this one is on another level. My hair holds shape all day without frizz, and it's actually fun to use. Feels sturdy too!",
-      image: "6a2f8320-e1f5-46ab-86f8-c986370ccda7.png",
+      image: "fdb4a610-2b43-4da1-a8a4-3e92b0f589f5.png",
     },
     {
       id: 3,
